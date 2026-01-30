@@ -21,9 +21,6 @@ python3Packages.buildPythonPackage {
 
     setup(
       name='tsim_extractor',
-      scripts=[
-        'tsim_extractor.py',
-      ],
       entry_points={
         'console_scripts': [
           'tsim_extractor = tsim_extractor:main',
