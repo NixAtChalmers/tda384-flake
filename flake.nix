@@ -19,6 +19,7 @@
   in {
     packages.${system} = {
       tsim = pkgs.callPackage ./packages/tsim.nix {};
+      tsim_extractor = pkgs.callPackage ./packages/tsim_extractor.nix {};
     };
 
     nixosModules.default = {
@@ -26,6 +27,7 @@
         erlang
         jdk25
         self.packages.${system}.tsim
+        self.packages.${system}.tsim_extractor
       ];
     };
   };
